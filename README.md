@@ -43,7 +43,7 @@ Selected **Required permissions**, click on **+ Add** and search for Azure Analy
 
 Check on **Read and Write all Models** and click on **Done** to finish the configuration.
 
-**5. Configure AADAccessToken.**
+**4. Configure AADAccessToken.**
 
 This are the App Settings you have to configure in the AADAccessToken program:
 
@@ -57,6 +57,26 @@ This are the App Settings you have to configure in the AADAccessToken program:
     <!-- Web API URL-->
     <add key="apiUrl" value="http://localhost:50117/api/values/?query="/>    
 
-**4. Use SQL Server Management Studio to add filter to an account or group of users**
+**5. Configure WebAPI**
 
-You can use SQL Server Management Studio to add filters to an acount or group.
+The only parameter you need to configure as App Setting is the Azure Analysis Service data source.
+
+    <!-- Azure Analysis Services -->    
+    <add key="asDataSource" value="[Azure Analysis Services Data Source - ex: asazure://westeurope.asazure.windows.net/returngis]"/>
+    <!-- End Azure Analysis Services -->
+
+**6. Test it!**
+
+Run both projects and login with your credentials for the console. Once you have successfuly logged you can see the next message:
+
+![Connected to Azure Analysis Services](./screenshots/Console-App-Connected-To-Azure-Analysis-Services.png)
+
+If you are using the adventure works model you can test one of these queries:
+
+Evaluate TOPN(10,Customer,Customer[Customer Id],1)
+
+![Evaluate TOPN(10,Customer,Customer[Customer Id],1)](./screenshots/Query-1.png)
+
+Evaluate(ROW("Count",COUNTROWS('Product')))
+
+![Evaluate(ROW("Count",COUNTROWS('Product')))](./screenshots/Query-2.png)
