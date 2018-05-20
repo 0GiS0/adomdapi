@@ -75,7 +75,7 @@ If you are using the adventure works model you can test one of these queries:
 
 Evaluate TOPN(10,Customer,Customer[Customer Id],1)
 
-![Evaluate TOPN(10,Customer,Customer[Customer Id],1)](./screenshots/Query-1.png)
+![Evaluate TOPN(10,Customer,Customer[Customer Id],1)](./screenshots/Query-1.PNG)
 
 Evaluate(ROW("Count",COUNTROWS('Product')))
 
