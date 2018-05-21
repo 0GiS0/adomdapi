@@ -19,17 +19,17 @@ namespace ADOMDWebAPI.Controllers
         // GET api/values
         public object Get(string query)
         {
-            var ssasConnection = GetConnection();
-
-            var cmd = new AdomdCommand(query)
+            using (var ssasConnection = GetConnection()) //It closes Azure Analysis Services Connection when it finishes
             {
-                Connection = ssasConnection
-            };
+                var cmd = new AdomdCommand(query)
+                {
+                    Connection = ssasConnection
+                };
 
+                var json = CreateJsonFromDataReader(cmd);
 
-            var json = CreateJsonFromDataReader(cmd);
-
-            return (json);
+                return (json);
+            }
         }
 
         private object CreateJsonFromDataReader(AdomdCommand cmd)
@@ -48,7 +48,7 @@ namespace ADOMDWebAPI.Controllers
                     json.WriteStartArray();
 
                     while (reader.Read())
-                    {   
+                    {
                         json.WriteStartObject();
 
                         for (int i = 0; i < reader.FieldCount; i++)
