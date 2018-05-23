@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADOMDWebAPI", "ADOMDWebAPI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AADAccessToken", "AADAccessToken\AADAccessToken.csproj", "{DF48BF2F-7575-4116-A3A0-71A04FA2CDBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebClient.csproj", "{84F48D85-3DAD-4363-8404-9CF82F1C632A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DF48BF2F-7575-4116-A3A0-71A04FA2CDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF48BF2F-7575-4116-A3A0-71A04FA2CDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF48BF2F-7575-4116-A3A0-71A04FA2CDBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84F48D85-3DAD-4363-8404-9CF82F1C632A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84F48D85-3DAD-4363-8404-9CF82F1C632A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84F48D85-3DAD-4363-8404-9CF82F1C632A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84F48D85-3DAD-4363-8404-9CF82F1C632A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
